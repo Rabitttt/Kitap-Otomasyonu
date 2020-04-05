@@ -45,7 +45,7 @@
             // btn_emanetekle
             // 
             this.btn_emanetekle.Location = new System.Drawing.Point(25, 341);
-            this.btn_emanetekle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_emanetekle.Margin = new System.Windows.Forms.Padding(2);
             this.btn_emanetekle.Name = "btn_emanetekle";
             this.btn_emanetekle.Size = new System.Drawing.Size(119, 49);
             this.btn_emanetekle.TabIndex = 0;
@@ -56,12 +56,13 @@
             // btn_iptal
             // 
             this.btn_iptal.Location = new System.Drawing.Point(200, 341);
-            this.btn_iptal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_iptal.Margin = new System.Windows.Forms.Padding(2);
             this.btn_iptal.Name = "btn_iptal";
             this.btn_iptal.Size = new System.Drawing.Size(116, 48);
             this.btn_iptal.TabIndex = 0;
             this.btn_iptal.Text = "İPTAL";
             this.btn_iptal.UseVisualStyleBackColor = true;
+            this.btn_iptal.Click += new System.EventHandler(this.btn_iptal_Click);
             // 
             // lbl_isim
             // 
@@ -122,7 +123,7 @@
             // txtB_isim
             // 
             this.txtB_isim.Location = new System.Drawing.Point(120, 35);
-            this.txtB_isim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtB_isim.Margin = new System.Windows.Forms.Padding(2);
             this.txtB_isim.Name = "txtB_isim";
             this.txtB_isim.Size = new System.Drawing.Size(120, 20);
             this.txtB_isim.TabIndex = 2;
@@ -130,7 +131,7 @@
             // txtB_soyisim
             // 
             this.txtB_soyisim.Location = new System.Drawing.Point(120, 63);
-            this.txtB_soyisim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtB_soyisim.Margin = new System.Windows.Forms.Padding(2);
             this.txtB_soyisim.Name = "txtB_soyisim";
             this.txtB_soyisim.Size = new System.Drawing.Size(120, 20);
             this.txtB_soyisim.TabIndex = 2;
@@ -138,7 +139,7 @@
             // txtB_telefon
             // 
             this.txtB_telefon.Location = new System.Drawing.Point(120, 93);
-            this.txtB_telefon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtB_telefon.Margin = new System.Windows.Forms.Padding(2);
             this.txtB_telefon.Name = "txtB_telefon";
             this.txtB_telefon.Size = new System.Drawing.Size(120, 20);
             this.txtB_telefon.TabIndex = 2;
@@ -146,7 +147,7 @@
             // rtxtB_adres
             // 
             this.rtxtB_adres.Location = new System.Drawing.Point(120, 116);
-            this.rtxtB_adres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtxtB_adres.Margin = new System.Windows.Forms.Padding(2);
             this.rtxtB_adres.Name = "rtxtB_adres";
             this.rtxtB_adres.Size = new System.Drawing.Size(198, 107);
             this.rtxtB_adres.TabIndex = 3;
@@ -155,7 +156,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(120, 250);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
             this.dateTimePicker1.TabIndex = 4;
@@ -179,7 +180,7 @@
             this.Controls.Add(this.btn_iptal);
             this.Controls.Add(this.btn_emanetekle);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_emanet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Emanet Oluştur";

@@ -57,16 +57,19 @@ namespace KitapOtomasyonu
 
             using (var baglan = new SQLiteConnection(sqlitedb_connstr))
             {
-                int rowID = -1;
-                using (var komut = new SQLiteCommand($"INSERT INTO Kullanicilar(Ad,Soyad,Telephone,Adres) VALUES('{txtB_isim.Text}','{txtB_soyisim.Text}','{txtB_telefon.Text}','{rtxtB_adres.Text}')", baglan))
+                Int64 rowID = -1;
+                using (SQLiteCommand komut = new SQLiteCommand($"INSERT INTO Kullanicilar(Ad,Soyad,Telephone,Adres) VALUES('{txtB_isim.Text}','{txtB_soyisim.Text}','{txtB_telefon.Text}','{rtxtB_adres.Text}')", baglan))
                 {
                     try
                     {
                         komut.Connection.Open();
+                        komut.ExecuteNonQuery();
+                        
+                        komut.CommandText = "select last_insert_rowid()";
 
-                        rowID = (int)komut.ExecuteNonQuery();
+                        rowID = (Int64)komut.ExecuteScalar();
 
-                        MessageBox.Show($"{rowID}");
+                        MessageBox.Show($"{(int)rowID}");
                     }
                     catch (Exception hata)
                     {
@@ -103,6 +106,11 @@ namespace KitapOtomasyonu
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_iptal_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -199,9 +199,31 @@ namespace KitapOtomasyonu
 
         }
 
+        private void ButonlarAktif()
+        {
+            btn_emanet.Enabled = true;
+            btn_emanet.BackColor = Color.White;
+
+            btn_guncelle.Enabled = true;
+            btn_guncelle.BackColor = Color.White;
+
+            btn_sil.Enabled = true;
+            btn_sil.BackColor = Color.White;
+        }
+        private void ButonlarPasif()
+        {
+            btn_emanet.Enabled = false;
+            btn_emanet.BackColor = Color.Gray;
+
+            btn_guncelle.Enabled = false;
+            btn_guncelle.BackColor = Color.Gray;
+
+            btn_sil.Enabled = false;
+            btn_sil.BackColor = Color.Gray;
+        }
+
         private void cmbBox_listelemeturu_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             using (var baglan = new SQLiteConnection(sqlitedb_connstr))
             {
                 DataSet ds = new DataSet();
@@ -211,6 +233,9 @@ namespace KitapOtomasyonu
 
                 if (cmbBox_listelemeturu.Text == "Kitaplar")
                 {
+
+                    ButonlarAktif();
+
                     cmbBox_aramaturu.Items.Clear();
                     cmbBox_aramaturu.Text = "Ad";
                     foreach (string i in kitap_ozellikleri)
@@ -222,19 +247,22 @@ namespace KitapOtomasyonu
                     da.Fill(ds, "Kitaplar");
                     dGV_liste.DataSource = ds.Tables[0];
 
-
                 }
                 if (cmbBox_listelemeturu.Text == "Emanetler")
                 {
+
+                    ButonlarPasif();
+
                     cmbBox_aramaturu.Items.Clear();
-                    cmbBox_aramaturu.Text = "Ad";
+                    cmbBox_aramaturu.Text = " Ad ";
                     foreach (string i in emanet_ozellikleri)
                     {
                         cmbBox_aramaturu.Items.Add(i);
                     }
 
-                    SQLiteDataAdapter da = new SQLiteDataAdapter("SELECT * From Emanet", sqlitedb_connstr);
-                    da.Fill(ds, "Emanet");
+                    
+                    SQLiteDataAdapter da = new SQLiteDataAdapter("SELECT Emanet.E_alinmaTarihi , Emanet.E_teslimTarihi , Kitaplar.Ad AS [Kitap Adı],Kullanicilar.Ad AS [Klullanıcı Adı] FROM Emanet INNER JOIN Kullanicilar ON Emanet.Kullanici = Kullanicilar.id INNER JOIN Kitaplar ON Emanet.Kitap = Kitaplar.id", sqlitedb_connstr);
+                    da.Fill(ds , "Emanet");
                     dGV_liste.DataSource = ds.Tables[0];
 
                 }
@@ -245,5 +273,9 @@ namespace KitapOtomasyonu
         
         }
 
+        private void cmbBox_aramaturu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

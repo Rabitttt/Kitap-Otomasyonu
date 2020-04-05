@@ -74,6 +74,7 @@ namespace KitapOtomasyonu
                                 komut.Connection.Open();
                                 komut.ExecuteNonQuery();
                                 MessageBox.Show("Kitap Başarıyla Eklendi...", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
                             }
                             catch (Exception hata)
                             {
@@ -89,7 +90,6 @@ namespace KitapOtomasyonu
                 {
                     MessageBox.Show("Lutfen Tarih ve Fiyat Alanını 'Sayı' ile Doldurunuz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
             }
         }
 

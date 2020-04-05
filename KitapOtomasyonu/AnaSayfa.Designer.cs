@@ -85,7 +85,7 @@
             this.btn_kitapEkle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_kitapEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_kitapEkle.Location = new System.Drawing.Point(271, 20);
-            this.btn_kitapEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_kitapEkle.Margin = new System.Windows.Forms.Padding(2);
             this.btn_kitapEkle.Name = "btn_kitapEkle";
             this.btn_kitapEkle.Size = new System.Drawing.Size(170, 69);
             this.btn_kitapEkle.TabIndex = 3;
@@ -101,7 +101,7 @@
             this.dGV_liste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV_liste.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dGV_liste.Location = new System.Drawing.Point(2, 111);
-            this.dGV_liste.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dGV_liste.Margin = new System.Windows.Forms.Padding(2);
             this.dGV_liste.Name = "dGV_liste";
             this.dGV_liste.RowHeadersWidth = 51;
             this.dGV_liste.RowTemplate.Height = 24;
@@ -114,7 +114,7 @@
             // 
             this.txtB_aranacak.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtB_aranacak.Location = new System.Drawing.Point(499, 54);
-            this.txtB_aranacak.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtB_aranacak.Margin = new System.Windows.Forms.Padding(2);
             this.txtB_aranacak.Name = "txtB_aranacak";
             this.txtB_aranacak.Size = new System.Drawing.Size(128, 20);
             this.txtB_aranacak.TabIndex = 5;
@@ -124,7 +124,7 @@
             this.btn_ara.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_ara.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ara.Location = new System.Drawing.Point(644, 50);
-            this.btn_ara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ara.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ara.Name = "btn_ara";
             this.btn_ara.Size = new System.Drawing.Size(88, 21);
             this.btn_ara.TabIndex = 6;
@@ -139,7 +139,7 @@
             this.cmbBox_aramaturu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBox_aramaturu.FormattingEnabled = true;
             this.cmbBox_aramaturu.Location = new System.Drawing.Point(499, 25);
-            this.cmbBox_aramaturu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBox_aramaturu.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBox_aramaturu.Name = "cmbBox_aramaturu";
             this.cmbBox_aramaturu.Size = new System.Drawing.Size(128, 25);
             this.cmbBox_aramaturu.TabIndex = 7;
@@ -163,7 +163,7 @@
             this.cmbBox_listelemeturu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBox_listelemeturu.FormattingEnabled = true;
             this.cmbBox_listelemeturu.Location = new System.Drawing.Point(53, 61);
-            this.cmbBox_listelemeturu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBox_listelemeturu.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBox_listelemeturu.Name = "cmbBox_listelemeturu";
             this.cmbBox_listelemeturu.Size = new System.Drawing.Size(159, 25);
             this.cmbBox_listelemeturu.TabIndex = 9;
@@ -209,7 +209,7 @@
             this.panel1.Controls.Add(this.btn_sil);
             this.panel1.Controls.Add(this.btn_guncelle);
             this.panel1.Location = new System.Drawing.Point(802, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 602);
             this.panel1.TabIndex = 2;
@@ -255,7 +255,7 @@
             this.panel2.Controls.Add(this.Albl_isim);
             this.panel2.Controls.Add(this.Albl_telefon);
             this.panel2.Location = new System.Drawing.Point(22, 236);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(229, 182);
             this.panel2.TabIndex = 30;
@@ -598,27 +598,29 @@
             // btn_emanet
             // 
             this.btn_emanet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_emanet.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_emanet.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_emanet.Location = new System.Drawing.Point(22, 448);
-            this.btn_emanet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_emanet.Margin = new System.Windows.Forms.Padding(2);
             this.btn_emanet.Name = "btn_emanet";
             this.btn_emanet.Size = new System.Drawing.Size(229, 39);
             this.btn_emanet.TabIndex = 2;
             this.btn_emanet.Text = "Emanet Ver";
-            this.btn_emanet.UseVisualStyleBackColor = true;
+            this.btn_emanet.UseVisualStyleBackColor = false;
             this.btn_emanet.Click += new System.EventHandler(this.btn_emanet_Click);
             // 
             // btn_sil
             // 
             this.btn_sil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_sil.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sil.Location = new System.Drawing.Point(140, 492);
-            this.btn_sil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_sil.Margin = new System.Windows.Forms.Padding(2);
             this.btn_sil.Name = "btn_sil";
             this.btn_sil.Size = new System.Drawing.Size(110, 45);
             this.btn_sil.TabIndex = 1;
             this.btn_sil.Text = "Sil";
-            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.UseVisualStyleBackColor = false;
             this.btn_sil.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_guncelle
@@ -626,7 +628,7 @@
             this.btn_guncelle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guncelle.Location = new System.Drawing.Point(22, 492);
-            this.btn_guncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_guncelle.Margin = new System.Windows.Forms.Padding(2);
             this.btn_guncelle.Name = "btn_guncelle";
             this.btn_guncelle.Size = new System.Drawing.Size(114, 45);
             this.btn_guncelle.TabIndex = 0;
@@ -646,9 +648,9 @@
             this.groupBox1.Controls.Add(this.cmbBox_listelemeturu);
             this.groupBox1.Controls.Add(this.cmbBox_aramaturu);
             this.groupBox1.Location = new System.Drawing.Point(9, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(788, 104);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -661,7 +663,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dGV_liste);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Palto Kitap Kafe";
