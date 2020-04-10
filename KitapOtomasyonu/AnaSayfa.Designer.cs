@@ -37,31 +37,31 @@
             this.cmbBox_listelemeturu = new System.Windows.Forms.ComboBox();
             this.lbl_listelemeturu = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Albl_adet = new System.Windows.Forms.Label();
+            this.cmb_kitapTuru = new System.Windows.Forms.ComboBox();
+            this.rtxtB_aciklama = new System.Windows.Forms.RichTextBox();
+            this.txtB_adet = new System.Windows.Forms.TextBox();
+            this.txtB_eklenmeTarihi = new System.Windows.Forms.TextBox();
+            this.txtB_yayinYili = new System.Windows.Forms.TextBox();
+            this.txtB_fiyat = new System.Windows.Forms.TextBox();
+            this.txtB_yayinevi = new System.Windows.Forms.TextBox();
+            this.txtB_yazar = new System.Windows.Forms.TextBox();
+            this.txtB_kitapAdi = new System.Windows.Forms.TextBox();
             this.lbl_adet = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.rtxtB_adres = new System.Windows.Forms.RichTextBox();
+            this.txtB_kalanZaman = new System.Windows.Forms.TextBox();
+            this.txtB_teslimTarihi = new System.Windows.Forms.TextBox();
+            this.txtB_alinmaTarihi = new System.Windows.Forms.TextBox();
+            this.txtB_telefon = new System.Windows.Forms.TextBox();
+            this.txtB_soyisim = new System.Windows.Forms.TextBox();
+            this.txtB_isim = new System.Windows.Forms.TextBox();
             this.lbl_kalanZaman = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.lbl_alinmaTarihi = new System.Windows.Forms.Label();
             this.lbl_teslimTarihi = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.Albl_adres = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.Albl_soyisim = new System.Windows.Forms.Label();
             this.Albl_isim = new System.Windows.Forms.Label();
             this.Albl_telefon = new System.Windows.Forms.Label();
-            this.Albl_aciklama = new System.Windows.Forms.Label();
-            this.Albl_eklenmeTarihi = new System.Windows.Forms.Label();
-            this.Albl_yayin_yili = new System.Windows.Forms.Label();
-            this.Albl_fiyat = new System.Windows.Forms.Label();
-            this.Albl_yayinevi = new System.Windows.Forms.Label();
-            this.Albl_yazar = new System.Windows.Forms.Label();
-            this.Albl_kitapturu = new System.Windows.Forms.Label();
-            this.Albl_kitapadi = new System.Windows.Forms.Label();
             this.lbl_eklenmetarihi = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@
             // 
             this.btn_kitapEkle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_kitapEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_kitapEkle.Location = new System.Drawing.Point(271, 20);
+            this.btn_kitapEkle.Location = new System.Drawing.Point(397, 20);
             this.btn_kitapEkle.Margin = new System.Windows.Forms.Padding(2);
             this.btn_kitapEkle.Name = "btn_kitapEkle";
             this.btn_kitapEkle.Size = new System.Drawing.Size(170, 69);
@@ -95,6 +95,9 @@
             // 
             // dGV_liste
             // 
+            this.dGV_liste.AllowUserToAddRows = false;
+            this.dGV_liste.AllowUserToDeleteRows = false;
+            this.dGV_liste.AllowUserToOrderColumns = true;
             this.dGV_liste.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -103,9 +106,10 @@
             this.dGV_liste.Location = new System.Drawing.Point(2, 111);
             this.dGV_liste.Margin = new System.Windows.Forms.Padding(2);
             this.dGV_liste.Name = "dGV_liste";
+            this.dGV_liste.ReadOnly = true;
             this.dGV_liste.RowHeadersWidth = 51;
             this.dGV_liste.RowTemplate.Height = 24;
-            this.dGV_liste.Size = new System.Drawing.Size(798, 493);
+            this.dGV_liste.Size = new System.Drawing.Size(1050, 560);
             this.dGV_liste.TabIndex = 4;
             this.dGV_liste.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_liste_CellClick);
             this.dGV_liste.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_liste_CellContentClick);
@@ -113,7 +117,7 @@
             // txtB_aranacak
             // 
             this.txtB_aranacak.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtB_aranacak.Location = new System.Drawing.Point(499, 54);
+            this.txtB_aranacak.Location = new System.Drawing.Point(625, 54);
             this.txtB_aranacak.Margin = new System.Windows.Forms.Padding(2);
             this.txtB_aranacak.Name = "txtB_aranacak";
             this.txtB_aranacak.Size = new System.Drawing.Size(128, 20);
@@ -123,14 +127,13 @@
             // 
             this.btn_ara.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_ara.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ara.Location = new System.Drawing.Point(644, 50);
+            this.btn_ara.Location = new System.Drawing.Point(770, 50);
             this.btn_ara.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ara.Name = "btn_ara";
             this.btn_ara.Size = new System.Drawing.Size(88, 21);
             this.btn_ara.TabIndex = 6;
             this.btn_ara.Text = "ARA";
             this.btn_ara.UseVisualStyleBackColor = true;
-            this.btn_ara.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // cmbBox_aramaturu
             // 
@@ -138,7 +141,7 @@
             this.cmbBox_aramaturu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBox_aramaturu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBox_aramaturu.FormattingEnabled = true;
-            this.cmbBox_aramaturu.Location = new System.Drawing.Point(499, 25);
+            this.cmbBox_aramaturu.Location = new System.Drawing.Point(625, 25);
             this.cmbBox_aramaturu.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBox_aramaturu.Name = "cmbBox_aramaturu";
             this.cmbBox_aramaturu.Size = new System.Drawing.Size(128, 25);
@@ -149,7 +152,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(643, 25);
+            this.label1.Location = new System.Drawing.Point(769, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 17);
@@ -162,7 +165,7 @@
             this.cmbBox_listelemeturu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBox_listelemeturu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBox_listelemeturu.FormattingEnabled = true;
-            this.cmbBox_listelemeturu.Location = new System.Drawing.Point(53, 61);
+            this.cmbBox_listelemeturu.Location = new System.Drawing.Point(179, 61);
             this.cmbBox_listelemeturu.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBox_listelemeturu.Name = "cmbBox_listelemeturu";
             this.cmbBox_listelemeturu.Size = new System.Drawing.Size(159, 25);
@@ -174,7 +177,7 @@
             this.lbl_listelemeturu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_listelemeturu.AutoSize = true;
             this.lbl_listelemeturu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_listelemeturu.Location = new System.Drawing.Point(50, 38);
+            this.lbl_listelemeturu.Location = new System.Drawing.Point(176, 38);
             this.lbl_listelemeturu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_listelemeturu.Name = "lbl_listelemeturu";
             this.lbl_listelemeturu.Size = new System.Drawing.Size(183, 17);
@@ -186,17 +189,17 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.Albl_adet);
+            this.panel1.Controls.Add(this.cmb_kitapTuru);
+            this.panel1.Controls.Add(this.rtxtB_aciklama);
+            this.panel1.Controls.Add(this.txtB_adet);
+            this.panel1.Controls.Add(this.txtB_eklenmeTarihi);
+            this.panel1.Controls.Add(this.txtB_yayinYili);
+            this.panel1.Controls.Add(this.txtB_fiyat);
+            this.panel1.Controls.Add(this.txtB_yayinevi);
+            this.panel1.Controls.Add(this.txtB_yazar);
+            this.panel1.Controls.Add(this.txtB_kitapAdi);
             this.panel1.Controls.Add(this.lbl_adet);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.Albl_aciklama);
-            this.panel1.Controls.Add(this.Albl_eklenmeTarihi);
-            this.panel1.Controls.Add(this.Albl_yayin_yili);
-            this.panel1.Controls.Add(this.Albl_fiyat);
-            this.panel1.Controls.Add(this.Albl_yayinevi);
-            this.panel1.Controls.Add(this.Albl_yazar);
-            this.panel1.Controls.Add(this.Albl_kitapturu);
-            this.panel1.Controls.Add(this.Albl_kitapadi);
             this.panel1.Controls.Add(this.lbl_eklenmetarihi);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
@@ -208,23 +211,76 @@
             this.panel1.Controls.Add(this.btn_emanet);
             this.panel1.Controls.Add(this.btn_sil);
             this.panel1.Controls.Add(this.btn_guncelle);
-            this.panel1.Location = new System.Drawing.Point(802, 2);
+            this.panel1.Location = new System.Drawing.Point(1054, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 602);
+            this.panel1.Size = new System.Drawing.Size(274, 669);
             this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // Albl_adet
+            // cmb_kitapTuru
             // 
-            this.Albl_adet.AutoSize = true;
-            this.Albl_adet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Albl_adet.Location = new System.Drawing.Point(127, 174);
-            this.Albl_adet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Albl_adet.Name = "Albl_adet";
-            this.Albl_adet.Size = new System.Drawing.Size(72, 15);
-            this.Albl_adet.TabIndex = 32;
-            this.Albl_adet.Text = "Belirtilmedi.";
+            this.cmb_kitapTuru.FormattingEnabled = true;
+            this.cmb_kitapTuru.Location = new System.Drawing.Point(140, 39);
+            this.cmb_kitapTuru.Name = "cmb_kitapTuru";
+            this.cmb_kitapTuru.Size = new System.Drawing.Size(121, 21);
+            this.cmb_kitapTuru.TabIndex = 34;
+            // 
+            // rtxtB_aciklama
+            // 
+            this.rtxtB_aciklama.Location = new System.Drawing.Point(140, 197);
+            this.rtxtB_aciklama.Name = "rtxtB_aciklama";
+            this.rtxtB_aciklama.Size = new System.Drawing.Size(128, 53);
+            this.rtxtB_aciklama.TabIndex = 33;
+            this.rtxtB_aciklama.Text = "";
+            // 
+            // txtB_adet
+            // 
+            this.txtB_adet.Location = new System.Drawing.Point(140, 168);
+            this.txtB_adet.Name = "txtB_adet";
+            this.txtB_adet.Size = new System.Drawing.Size(100, 20);
+            this.txtB_adet.TabIndex = 32;
+            // 
+            // txtB_eklenmeTarihi
+            // 
+            this.txtB_eklenmeTarihi.Location = new System.Drawing.Point(140, 147);
+            this.txtB_eklenmeTarihi.Name = "txtB_eklenmeTarihi";
+            this.txtB_eklenmeTarihi.Size = new System.Drawing.Size(100, 20);
+            this.txtB_eklenmeTarihi.TabIndex = 32;
+            // 
+            // txtB_yayinYili
+            // 
+            this.txtB_yayinYili.Location = new System.Drawing.Point(140, 125);
+            this.txtB_yayinYili.Name = "txtB_yayinYili";
+            this.txtB_yayinYili.Size = new System.Drawing.Size(100, 20);
+            this.txtB_yayinYili.TabIndex = 32;
+            // 
+            // txtB_fiyat
+            // 
+            this.txtB_fiyat.Location = new System.Drawing.Point(140, 100);
+            this.txtB_fiyat.Name = "txtB_fiyat";
+            this.txtB_fiyat.Size = new System.Drawing.Size(100, 20);
+            this.txtB_fiyat.TabIndex = 32;
+            // 
+            // txtB_yayinevi
+            // 
+            this.txtB_yayinevi.Location = new System.Drawing.Point(140, 81);
+            this.txtB_yayinevi.Name = "txtB_yayinevi";
+            this.txtB_yayinevi.Size = new System.Drawing.Size(100, 20);
+            this.txtB_yayinevi.TabIndex = 32;
+            // 
+            // txtB_yazar
+            // 
+            this.txtB_yazar.Location = new System.Drawing.Point(140, 58);
+            this.txtB_yazar.Name = "txtB_yazar";
+            this.txtB_yazar.Size = new System.Drawing.Size(100, 20);
+            this.txtB_yazar.TabIndex = 32;
+            // 
+            // txtB_kitapAdi
+            // 
+            this.txtB_kitapAdi.Location = new System.Drawing.Point(140, 15);
+            this.txtB_kitapAdi.Name = "txtB_kitapAdi";
+            this.txtB_kitapAdi.Size = new System.Drawing.Size(100, 20);
+            this.txtB_kitapAdi.TabIndex = 32;
             // 
             // lbl_adet
             // 
@@ -240,36 +296,75 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.rtxtB_adres);
+            this.panel2.Controls.Add(this.txtB_kalanZaman);
+            this.panel2.Controls.Add(this.txtB_teslimTarihi);
+            this.panel2.Controls.Add(this.txtB_alinmaTarihi);
+            this.panel2.Controls.Add(this.txtB_telefon);
+            this.panel2.Controls.Add(this.txtB_soyisim);
+            this.panel2.Controls.Add(this.txtB_isim);
             this.panel2.Controls.Add(this.lbl_kalanZaman);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.lbl_alinmaTarihi);
             this.panel2.Controls.Add(this.lbl_teslimTarihi);
-            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.Albl_adres);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.Albl_soyisim);
             this.panel2.Controls.Add(this.Albl_isim);
             this.panel2.Controls.Add(this.Albl_telefon);
-            this.panel2.Location = new System.Drawing.Point(22, 236);
+            this.panel2.Location = new System.Drawing.Point(22, 260);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(229, 182);
             this.panel2.TabIndex = 30;
             // 
-            // label14
+            // rtxtB_adres
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(116, 157);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 17);
-            this.label14.TabIndex = 43;
-            this.label14.Text = "Belirtilmedi.";
+            this.rtxtB_adres.Location = new System.Drawing.Point(118, 71);
+            this.rtxtB_adres.Name = "rtxtB_adres";
+            this.rtxtB_adres.Size = new System.Drawing.Size(100, 27);
+            this.rtxtB_adres.TabIndex = 43;
+            this.rtxtB_adres.Text = "";
+            // 
+            // txtB_kalanZaman
+            // 
+            this.txtB_kalanZaman.Location = new System.Drawing.Point(118, 157);
+            this.txtB_kalanZaman.Name = "txtB_kalanZaman";
+            this.txtB_kalanZaman.Size = new System.Drawing.Size(100, 20);
+            this.txtB_kalanZaman.TabIndex = 32;
+            // 
+            // txtB_teslimTarihi
+            // 
+            this.txtB_teslimTarihi.Location = new System.Drawing.Point(118, 135);
+            this.txtB_teslimTarihi.Name = "txtB_teslimTarihi";
+            this.txtB_teslimTarihi.Size = new System.Drawing.Size(100, 20);
+            this.txtB_teslimTarihi.TabIndex = 32;
+            // 
+            // txtB_alinmaTarihi
+            // 
+            this.txtB_alinmaTarihi.Location = new System.Drawing.Point(118, 115);
+            this.txtB_alinmaTarihi.Name = "txtB_alinmaTarihi";
+            this.txtB_alinmaTarihi.Size = new System.Drawing.Size(100, 20);
+            this.txtB_alinmaTarihi.TabIndex = 32;
+            // 
+            // txtB_telefon
+            // 
+            this.txtB_telefon.Location = new System.Drawing.Point(118, 52);
+            this.txtB_telefon.Name = "txtB_telefon";
+            this.txtB_telefon.Size = new System.Drawing.Size(100, 20);
+            this.txtB_telefon.TabIndex = 32;
+            // 
+            // txtB_soyisim
+            // 
+            this.txtB_soyisim.Location = new System.Drawing.Point(118, 26);
+            this.txtB_soyisim.Name = "txtB_soyisim";
+            this.txtB_soyisim.Size = new System.Drawing.Size(100, 20);
+            this.txtB_soyisim.TabIndex = 32;
+            // 
+            // txtB_isim
+            // 
+            this.txtB_isim.Location = new System.Drawing.Point(118, 4);
+            this.txtB_isim.Name = "txtB_isim";
+            this.txtB_isim.Size = new System.Drawing.Size(100, 20);
+            this.txtB_isim.TabIndex = 32;
             // 
             // lbl_kalanZaman
             // 
@@ -281,28 +376,6 @@
             this.lbl_kalanZaman.Size = new System.Drawing.Size(113, 17);
             this.lbl_kalanZaman.TabIndex = 42;
             this.lbl_kalanZaman.Text = "Kalan Zaman :";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(116, 135);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 17);
-            this.label16.TabIndex = 41;
-            this.label16.Text = "Belirtilmedi.";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(116, 115);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(80, 17);
-            this.label17.TabIndex = 40;
-            this.label17.Text = "Belirtilmedi.";
             // 
             // lbl_alinmaTarihi
             // 
@@ -326,17 +399,6 @@
             this.lbl_teslimTarihi.TabIndex = 38;
             this.lbl_teslimTarihi.Text = "Teslim Tarihi :";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(104, 71);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 17);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Belirtilmedi.";
-            // 
             // Albl_adres
             // 
             this.Albl_adres.AutoSize = true;
@@ -347,40 +409,6 @@
             this.Albl_adres.Size = new System.Drawing.Size(60, 17);
             this.Albl_adres.TabIndex = 36;
             this.Albl_adres.Text = "Adres :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 49);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 17);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Belirtilmedi.";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(104, 29);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 17);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Belirtilmedi.";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(104, 7);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 17);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "Belirtilmedi.";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // Albl_soyisim
             // 
@@ -414,98 +442,6 @@
             this.Albl_telefon.Size = new System.Drawing.Size(73, 17);
             this.Albl_telefon.TabIndex = 30;
             this.Albl_telefon.Text = "Telefon :";
-            this.Albl_telefon.Click += new System.EventHandler(this.Albl_telefon_Click);
-            // 
-            // Albl_aciklama
-            // 
-            this.Albl_aciklama.AutoSize = true;
-            this.Albl_aciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Albl_aciklama.Location = new System.Drawing.Point(127, 198);
-            this.Albl_aciklama.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Albl_aciklama.Name = "Albl_aciklama";
-            this.Albl_aciklama.Size = new System.Drawing.Size(72, 15);
-            this.Albl_aciklama.TabIndex = 29;
-            this.Albl_aciklama.Text = "Belirtilmedi.";
-            // 
-            // Albl_eklenmeTarihi
-            // 
-            this.Albl_eklenmeTarihi.AutoSize = true;
-            this.Albl_eklenmeTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Albl_eklenmeTarihi.Location = new System.Drawing.Point(127, 150);
-            this.Albl_eklenmeTarihi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Albl_eklenmeTarihi.Name = "Albl_eklenmeTarihi";
-            this.Albl_eklenmeTarihi.Size = new System.Drawing.Size(72, 15);
-            this.Albl_eklenmeTarihi.TabIndex = 28;
-            this.Albl_eklenmeTarihi.Text = "Belirtilmedi.";
-            this.Albl_eklenmeTarihi.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // Albl_yayin_yili
-            // 
-            this.Albl_yayin_yili.AutoSize = true;
-            this.Albl_yayin_yili.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Albl_yayin_yili.Location = new System.Drawing.Point(127, 129);
-            this.Albl_yayin_yili.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Albl_yayin_yili.Name = "Albl_yayin_yili";
-            this.Albl_yayin_yili.Size = new System.Drawing.Size(72, 15);
-            this.Albl_yayin_yili.TabIndex = 28;
-            this.Albl_yayin_yili.Text = "Belirtilmedi.";
-            // 
-            // Albl_fiyat
-            // 
-            this.Albl_fiyat.AutoSize = true;
-            this.Albl_fiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Albl_fiyat.Location = new System.Drawing.Point(127, 104);
-            this.Albl_fiyat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Albl_fiyat.Name = "Albl_fiyat";
-            this.Albl_fiyat.Size = new System.Drawing.Size(72, 15);
-            this.Albl_fiyat.TabIndex = 27;
-            this.Albl_fiyat.Text = "Belirtilmedi.";
-            // 
-            // Albl_yayinevi
-            // 
-            this.Albl_yayinevi.AutoSize = true;
-            this.Albl_yayinevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Albl_yayinevi.Location = new System.Drawing.Point(127, 82);
-            this.Albl_yayinevi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Albl_yayinevi.Name = "Albl_yayinevi";
-            this.Albl_yayinevi.Size = new System.Drawing.Size(72, 15);
-            this.Albl_yayinevi.TabIndex = 26;
-            this.Albl_yayinevi.Text = "Belirtilmedi.";
-            // 
-            // Albl_yazar
-            // 
-            this.Albl_yazar.AutoSize = true;
-            this.Albl_yazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Albl_yazar.Location = new System.Drawing.Point(127, 62);
-            this.Albl_yazar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Albl_yazar.Name = "Albl_yazar";
-            this.Albl_yazar.Size = new System.Drawing.Size(72, 15);
-            this.Albl_yazar.TabIndex = 25;
-            this.Albl_yazar.Text = "Belirtilmedi.";
-            this.Albl_yazar.Click += new System.EventHandler(this.Albl_yazar_Click);
-            // 
-            // Albl_kitapturu
-            // 
-            this.Albl_kitapturu.AutoSize = true;
-            this.Albl_kitapturu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Albl_kitapturu.Location = new System.Drawing.Point(127, 40);
-            this.Albl_kitapturu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Albl_kitapturu.Name = "Albl_kitapturu";
-            this.Albl_kitapturu.Size = new System.Drawing.Size(72, 15);
-            this.Albl_kitapturu.TabIndex = 24;
-            this.Albl_kitapturu.Text = "Belirtilmedi.";
-            // 
-            // Albl_kitapadi
-            // 
-            this.Albl_kitapadi.AutoSize = true;
-            this.Albl_kitapadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Albl_kitapadi.Location = new System.Drawing.Point(127, 19);
-            this.Albl_kitapadi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Albl_kitapadi.Name = "Albl_kitapadi";
-            this.Albl_kitapadi.Size = new System.Drawing.Size(72, 15);
-            this.Albl_kitapadi.TabIndex = 23;
-            this.Albl_kitapadi.Text = "Belirtilmedi.";
-            this.Albl_kitapadi.Click += new System.EventHandler(this.Albl_kitapadi_Click);
             // 
             // lbl_eklenmetarihi
             // 
@@ -600,7 +536,7 @@
             this.btn_emanet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_emanet.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_emanet.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_emanet.Location = new System.Drawing.Point(22, 448);
+            this.btn_emanet.Location = new System.Drawing.Point(22, 481);
             this.btn_emanet.Margin = new System.Windows.Forms.Padding(2);
             this.btn_emanet.Name = "btn_emanet";
             this.btn_emanet.Size = new System.Drawing.Size(229, 39);
@@ -614,27 +550,25 @@
             this.btn_sil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_sil.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sil.Location = new System.Drawing.Point(140, 492);
+            this.btn_sil.Location = new System.Drawing.Point(140, 525);
             this.btn_sil.Margin = new System.Windows.Forms.Padding(2);
             this.btn_sil.Name = "btn_sil";
             this.btn_sil.Size = new System.Drawing.Size(110, 45);
             this.btn_sil.TabIndex = 1;
             this.btn_sil.Text = "Sil";
             this.btn_sil.UseVisualStyleBackColor = false;
-            this.btn_sil.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_guncelle
             // 
             this.btn_guncelle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guncelle.Location = new System.Drawing.Point(22, 492);
+            this.btn_guncelle.Location = new System.Drawing.Point(22, 525);
             this.btn_guncelle.Margin = new System.Windows.Forms.Padding(2);
             this.btn_guncelle.Name = "btn_guncelle";
             this.btn_guncelle.Size = new System.Drawing.Size(114, 45);
             this.btn_guncelle.TabIndex = 0;
             this.btn_guncelle.Text = "Güncelle";
             this.btn_guncelle.UseVisualStyleBackColor = true;
-            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // groupBox1
             // 
@@ -651,7 +585,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(788, 104);
+            this.groupBox1.Size = new System.Drawing.Size(1040, 104);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
@@ -659,7 +593,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 607);
+            this.ClientSize = new System.Drawing.Size(1334, 674);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dGV_liste);
             this.Controls.Add(this.panel1);
@@ -689,7 +623,6 @@
         private System.Windows.Forms.ComboBox cmbBox_listelemeturu;
         private System.Windows.Forms.Label lbl_listelemeturu;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label Albl_kitapadi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -700,32 +633,33 @@
         private System.Windows.Forms.Button btn_emanet;
         private System.Windows.Forms.Button btn_sil;
         private System.Windows.Forms.Button btn_guncelle;
-        private System.Windows.Forms.Label Albl_aciklama;
-        private System.Windows.Forms.Label Albl_yayin_yili;
-        private System.Windows.Forms.Label Albl_fiyat;
-        private System.Windows.Forms.Label Albl_yayinevi;
-        private System.Windows.Forms.Label Albl_yazar;
-        private System.Windows.Forms.Label Albl_kitapturu;
-        private System.Windows.Forms.Label Albl_eklenmeTarihi;
         private System.Windows.Forms.Label lbl_eklenmetarihi;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label Albl_adres;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label Albl_soyisim;
         private System.Windows.Forms.Label Albl_isim;
         private System.Windows.Forms.Label Albl_telefon;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lbl_kalanZaman;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lbl_alinmaTarihi;
         private System.Windows.Forms.Label lbl_teslimTarihi;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label Albl_adet;
         private System.Windows.Forms.Label lbl_adet;
+        private System.Windows.Forms.TextBox txtB_adet;
+        private System.Windows.Forms.TextBox txtB_eklenmeTarihi;
+        private System.Windows.Forms.TextBox txtB_yayinYili;
+        private System.Windows.Forms.TextBox txtB_fiyat;
+        private System.Windows.Forms.TextBox txtB_yayinevi;
+        private System.Windows.Forms.TextBox txtB_yazar;
+        private System.Windows.Forms.TextBox txtB_kitapAdi;
+        private System.Windows.Forms.TextBox txtB_kalanZaman;
+        private System.Windows.Forms.TextBox txtB_teslimTarihi;
+        private System.Windows.Forms.TextBox txtB_alinmaTarihi;
+        private System.Windows.Forms.TextBox txtB_telefon;
+        private System.Windows.Forms.TextBox txtB_soyisim;
+        private System.Windows.Forms.TextBox txtB_isim;
+        private System.Windows.Forms.ComboBox cmb_kitapTuru;
+        private System.Windows.Forms.RichTextBox rtxtB_aciklama;
+        private System.Windows.Forms.RichTextBox rtxtB_adres;
     }
 }
 

@@ -86,7 +86,7 @@ namespace KitapOtomasyonu
                     }
 
                 }
-                catch (Exception hata)
+                catch (Exception)
                 {
                     MessageBox.Show("Lutfen Tarih ve Fiyat Alanını 'Sayı' ile Doldurunuz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
