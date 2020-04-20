@@ -15,9 +15,6 @@ namespace KitapOtomasyonu
     public partial class frm_emanet : Form
     {
 
-        private SQLiteHelper helper = new SQLiteHelper();
-
-
         private int Ealinan_KitapID;
 
         readonly string sqlitedb_connstr = @"Data Source =" + Application.StartupPath + "\\database.db; version=3;";
@@ -25,11 +22,9 @@ namespace KitapOtomasyonu
         public frm_emanet(string ids)
         {
             InitializeComponent();
-            helper.ConnectToDb(sqlitedb_connstr);//düzenlenecek,
 
-            int EverilenKitap_id = Convert.ToInt32(ids);
+            this.Ealinan_KitapID = Convert.ToInt32(ids);
 
-            KitapID_Set(EverilenKitap_id);
         }
 
         public int KitapID_Get()
@@ -42,16 +37,6 @@ namespace KitapOtomasyonu
         }
 
 
-        private void frm_emanet_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_teslimTarihi_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_emanetekle_Click(object sender, EventArgs e)
         {
 
@@ -62,25 +47,37 @@ namespace KitapOtomasyonu
 
             using (SQLiteConnection baglan = new SQLiteConnection(sqlitedb_connstr))
             {
-                int rowID = -1;
                 using (SQLiteCommand komut = new SQLiteCommand($"INSERT INTO Kullanicilar(Ad,Soyad,Telephone,Adres) VALUES('{txtB_isim.Text}','{txtB_soyisim.Text}','{txtB_telefon.Text}','{rtxtB_adres.Text}')", baglan))
                 {
                     try
                     {
                         komut.Connection.Open();
-                        rowID = komut.ExecuteNonQuery();
+                        komut.CommandTimeout = 10;
+                        komut.ExecuteNonQuery();
                     }
                     catch (Exception hata)
                     {
                         MessageBox.Show(hata.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                
 
-
-                //komut.CommandText = "select last_insert_rowid()";
-                //rowID = (Int64)komut.ExecuteScalar();
-                //MessageBox.Show(rowID.ToString());
-
+                int rowID = -1;
+                using (SQLiteCommand komut = new SQLiteCommand("SELECT last_insert_rowid()",baglan))
+                {
+                    try
+                    {
+                        komut.Connection.Open();
+                        rowID = Convert.ToInt32(komut.ExecuteScalar());
+                    }
+                    catch (Exception hata)
+                    {
+                        MessageBox.Show(hata.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            //komut.CommandText = "select last_insert_rowid()";
+            //rowID = (Int64)komut.ExecuteScalar();
+            //MessageBox.Show(rowID.ToString());
 
                 if (rowID == -1)
                 {
@@ -92,6 +89,7 @@ namespace KitapOtomasyonu
                     {
                         try
                         {
+                            komut.Connection.Open();
                             komut.ExecuteNonQuery();
                             MessageBox.Show("Başarıyla Oluşturuldu...", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
@@ -108,16 +106,9 @@ namespace KitapOtomasyonu
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void frm_emanet_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void btn_iptal_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-   
     }
 }

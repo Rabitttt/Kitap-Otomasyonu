@@ -83,15 +83,6 @@ namespace KitapOtomasyonu
             }
         }
 
-        private void dGV_liste_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Albl_kitapadi_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void KitaplariListele()
@@ -119,7 +110,6 @@ namespace KitapOtomasyonu
                                 rtxtB_aciklama.Text = dataReader["Aciklama"].ToString();
 
                             }
-
                         }
                     }
                     catch (Exception hata)
@@ -128,9 +118,8 @@ namespace KitapOtomasyonu
                     }
                     komut.Connection.Close();
                 }
-
-            
-            string AktiflikDurumu = null;
+   
+                string AktiflikDurumu = null;
                 using (SQLiteCommand komut = new SQLiteCommand($"SELECT * FROM Kitaplar INNER JOIN Emanet ON Kitaplar.id = Emanet.Kitap WHERE Kitaplar.id = {dGV_liste.CurrentRow.Cells["id"].Value.ToString()}", baglan))
                 {
                     try
@@ -154,10 +143,12 @@ namespace KitapOtomasyonu
             if (string.IsNullOrEmpty(AktiflikDurumu))
             {
                 panel2.Visible = false;
+                    ButonlarAktif();
             }
             else
             {
                 panel2.Visible = true;
+                    ButonlarPasif();
                     string KullaniciID = null;
                     using (SQLiteCommand komut = new SQLiteCommand($"SELECT * FROM Emanet INNER JOIN Kitaplar ON Kitaplar.id = Emanet.Kitap WHERE Kitaplar.id = {dGV_liste.CurrentRow.Cells["id"].Value.ToString()}", baglan))
                     {
@@ -170,18 +161,14 @@ namespace KitapOtomasyonu
 
                                 KullaniciID = dataReader["Kullanici"].ToString();
 
-                                string Ealinma_tarihi = dataReader["E_alinmaTarihi"].ToString();
                                 string Eteslim_tarihi = dataReader["E_teslimTarihi"].ToString();
 
-
-
-                                txtB_alinmaTarihi.Text = Ealinma_tarihi;
                                 txtB_teslimTarihi.Text = Eteslim_tarihi;
 
-                                long alinmaT_ticks = Convert.ToDateTime(Ealinma_tarihi).Ticks;
+                                long anlik_tarih = DateTime.Now.Ticks;
                                 long teslimT_ticks = Convert.ToDateTime(Eteslim_tarihi).Ticks;
 
-                                long kalanZaman_ticks = teslimT_ticks - alinmaT_ticks;
+                                long kalanZaman_ticks = teslimT_ticks - anlik_tarih;
 
                                 if (kalanZaman_ticks < 0)
                                 {
@@ -204,12 +191,12 @@ namespace KitapOtomasyonu
                         }
                         komut.Connection.Close();
                     }
-                using (SQLiteCommand cmd = new SQLiteCommand($"SELECT * FROM Kullanicilar WHERE Kullanicilar.id = {KullaniciID}",baglan))
+                using (SQLiteCommand komut = new SQLiteCommand($"SELECT * FROM Kullanicilar WHERE Kullanicilar.id = {KullaniciID}",baglan))
                 {
                             try
                             {
-                                cmd.Connection.Open();
-                            SQLiteDataReader dataReader = cmd.ExecuteReader();
+                              komut.Connection.Open();
+                            SQLiteDataReader dataReader = komut.ExecuteReader();
                             if(dataReader.Read())
                             {
                                 txtB_isim.Text = dataReader["Ad"].ToString();
@@ -223,18 +210,15 @@ namespace KitapOtomasyonu
                             {
                             MessageBox.Show(hata.Message);
                             }
+                        komut.Connection.Close();
                 }
             }
-
-            
-
             }
-
 
         }
         private void EmanetleriListele()
         {
-
+            panel2.Visible = true;
             using (SQLiteConnection baglan = new SQLiteConnection(sqlitedb_connstr))
             {
 
@@ -242,7 +226,6 @@ namespace KitapOtomasyonu
                 {
                     try
                     {
-                        komut.Connection.Open();
                         SQLiteDataReader dtr = komut.ExecuteReader();
                         if (dtr.Read())
                         {
@@ -275,19 +258,14 @@ namespace KitapOtomasyonu
                         if (dataReader.Read())
                         {
 
-
-                            string Ealinma_tarihi = dataReader["E_alinmaTarihi"].ToString();
                             string Eteslim_tarihi = dataReader["E_teslimTarihi"].ToString();
 
-
-
-                            txtB_alinmaTarihi.Text = Ealinma_tarihi;
                             txtB_teslimTarihi.Text = Eteslim_tarihi;
 
-                            long alinmaT_ticks = Convert.ToDateTime(Ealinma_tarihi).Ticks;
+                            long anlik_tarih = DateTime.Now.Ticks;
                             long teslimT_ticks = Convert.ToDateTime(Eteslim_tarihi).Ticks;
 
-                            long kalanZaman_ticks = teslimT_ticks - alinmaT_ticks;
+                            long kalanZaman_ticks = teslimT_ticks - anlik_tarih;
 
                             if (kalanZaman_ticks < 0)
                             {
@@ -319,6 +297,7 @@ namespace KitapOtomasyonu
                     {
                         MessageBox.Show(hata.Message);
                     }
+                    
                 }
             }
 
@@ -340,15 +319,6 @@ namespace KitapOtomasyonu
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Albl_adet_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ButonlarAktif()
         {
@@ -418,7 +388,7 @@ namespace KitapOtomasyonu
                     dGV_liste.DataSource = ds.Tables[0];
 
                     EmanetleriListele();
-
+                    baglan.Close();
                 }
 
             }
@@ -427,5 +397,14 @@ namespace KitapOtomasyonu
 
         }
 
+        private void dGV_liste_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

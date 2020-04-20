@@ -44,10 +44,10 @@
             // 
             // btn_emanetekle
             // 
-            this.btn_emanetekle.Location = new System.Drawing.Point(25, 341);
-            this.btn_emanetekle.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_emanetekle.Location = new System.Drawing.Point(33, 420);
+            this.btn_emanetekle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_emanetekle.Name = "btn_emanetekle";
-            this.btn_emanetekle.Size = new System.Drawing.Size(119, 49);
+            this.btn_emanetekle.Size = new System.Drawing.Size(159, 60);
             this.btn_emanetekle.TabIndex = 0;
             this.btn_emanetekle.Text = "EKLE";
             this.btn_emanetekle.UseVisualStyleBackColor = true;
@@ -55,21 +55,19 @@
             // 
             // btn_iptal
             // 
-            this.btn_iptal.Location = new System.Drawing.Point(200, 341);
-            this.btn_iptal.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_iptal.Location = new System.Drawing.Point(267, 420);
+            this.btn_iptal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_iptal.Name = "btn_iptal";
-            this.btn_iptal.Size = new System.Drawing.Size(116, 48);
+            this.btn_iptal.Size = new System.Drawing.Size(155, 59);
             this.btn_iptal.TabIndex = 0;
             this.btn_iptal.Text = "İPTAL";
             this.btn_iptal.UseVisualStyleBackColor = true;
-            this.btn_iptal.Click += new System.EventHandler(this.btn_iptal_Click);
             // 
             // lbl_isim
             // 
             this.lbl_isim.AutoSize = true;
             this.lbl_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_isim.Location = new System.Drawing.Point(62, 35);
-            this.lbl_isim.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_isim.Location = new System.Drawing.Point(83, 43);
             this.lbl_isim.Name = "lbl_isim";
             this.lbl_isim.Size = new System.Drawing.Size(46, 17);
             this.lbl_isim.TabIndex = 1;
@@ -79,8 +77,7 @@
             // 
             this.lbl_soyisim.AutoSize = true;
             this.lbl_soyisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_soyisim.Location = new System.Drawing.Point(39, 63);
-            this.lbl_soyisim.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_soyisim.Location = new System.Drawing.Point(52, 78);
             this.lbl_soyisim.Name = "lbl_soyisim";
             this.lbl_soyisim.Size = new System.Drawing.Size(73, 17);
             this.lbl_soyisim.TabIndex = 1;
@@ -90,8 +87,7 @@
             // 
             this.lbl_telefon.AutoSize = true;
             this.lbl_telefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_telefon.Location = new System.Drawing.Point(42, 93);
-            this.lbl_telefon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_telefon.Location = new System.Drawing.Point(56, 114);
             this.lbl_telefon.Name = "lbl_telefon";
             this.lbl_telefon.Size = new System.Drawing.Size(73, 17);
             this.lbl_telefon.TabIndex = 1;
@@ -101,8 +97,7 @@
             // 
             this.lbl_adres.AutoSize = true;
             this.lbl_adres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_adres.Location = new System.Drawing.Point(52, 116);
-            this.lbl_adres.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_adres.Location = new System.Drawing.Point(69, 143);
             this.lbl_adres.Name = "lbl_adres";
             this.lbl_adres.Size = new System.Drawing.Size(60, 17);
             this.lbl_adres.TabIndex = 1;
@@ -112,61 +107,58 @@
             // 
             this.lbl_teslimTarihi.AutoSize = true;
             this.lbl_teslimTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_teslimTarihi.Location = new System.Drawing.Point(9, 250);
-            this.lbl_teslimTarihi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_teslimTarihi.Location = new System.Drawing.Point(12, 308);
             this.lbl_teslimTarihi.Name = "lbl_teslimTarihi";
             this.lbl_teslimTarihi.Size = new System.Drawing.Size(112, 17);
             this.lbl_teslimTarihi.TabIndex = 1;
             this.lbl_teslimTarihi.Text = "Teslim Tarihi :";
-            this.lbl_teslimTarihi.Click += new System.EventHandler(this.lbl_teslimTarihi_Click);
             // 
             // txtB_isim
             // 
-            this.txtB_isim.Location = new System.Drawing.Point(120, 35);
-            this.txtB_isim.Margin = new System.Windows.Forms.Padding(2);
+            this.txtB_isim.Location = new System.Drawing.Point(160, 43);
+            this.txtB_isim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtB_isim.Name = "txtB_isim";
-            this.txtB_isim.Size = new System.Drawing.Size(120, 20);
+            this.txtB_isim.Size = new System.Drawing.Size(159, 22);
             this.txtB_isim.TabIndex = 2;
             // 
             // txtB_soyisim
             // 
-            this.txtB_soyisim.Location = new System.Drawing.Point(120, 63);
-            this.txtB_soyisim.Margin = new System.Windows.Forms.Padding(2);
+            this.txtB_soyisim.Location = new System.Drawing.Point(160, 78);
+            this.txtB_soyisim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtB_soyisim.Name = "txtB_soyisim";
-            this.txtB_soyisim.Size = new System.Drawing.Size(120, 20);
+            this.txtB_soyisim.Size = new System.Drawing.Size(159, 22);
             this.txtB_soyisim.TabIndex = 2;
             // 
             // txtB_telefon
             // 
-            this.txtB_telefon.Location = new System.Drawing.Point(120, 93);
-            this.txtB_telefon.Margin = new System.Windows.Forms.Padding(2);
+            this.txtB_telefon.Location = new System.Drawing.Point(160, 114);
+            this.txtB_telefon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtB_telefon.Name = "txtB_telefon";
-            this.txtB_telefon.Size = new System.Drawing.Size(120, 20);
+            this.txtB_telefon.Size = new System.Drawing.Size(159, 22);
             this.txtB_telefon.TabIndex = 2;
             // 
             // rtxtB_adres
             // 
-            this.rtxtB_adres.Location = new System.Drawing.Point(120, 116);
-            this.rtxtB_adres.Margin = new System.Windows.Forms.Padding(2);
+            this.rtxtB_adres.Location = new System.Drawing.Point(160, 143);
+            this.rtxtB_adres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtxtB_adres.Name = "rtxtB_adres";
-            this.rtxtB_adres.Size = new System.Drawing.Size(198, 107);
+            this.rtxtB_adres.Size = new System.Drawing.Size(263, 131);
             this.rtxtB_adres.TabIndex = 3;
             this.rtxtB_adres.Text = "";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(120, 250);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(160, 308);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(243, 22);
             this.dateTimePicker1.TabIndex = 4;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // frm_emanet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 418);
+            this.ClientSize = new System.Drawing.Size(445, 514);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.rtxtB_adres);
             this.Controls.Add(this.txtB_telefon);
@@ -180,7 +172,7 @@
             this.Controls.Add(this.btn_iptal);
             this.Controls.Add(this.btn_emanetekle);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_emanet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Emanet Oluştur";
